@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Pagina-inicial.css">
+        <title>inicial</title>
+    </head>
+        <body>
+            <script src="Pagina-inicial.js"></script>
+
+            <!-- Inicio do cabeçalho -->
+            <header class="top" id="top">
+                <!-- Botão da barra de tarefas do celular -->
+                <button onclick="Menu()" class="botao-cel" id="botao-cel">&#9776</button>
+
+                <!-- Imagem e texto da logo -->
+                <div class="logo">
+                    <img src="imgs/logo.png" alt="logotipo" class="logotipo">
+                    <h1 id="nome">Webook</h1>
+                </div>
+                
+                <!-- Menu principal pc-->
+                <nav>
+                    <ul class="menu-comp">
+                        <li class="list-comp"><a href="#top">Inicio</a></li>
+                        <li class="list-comp"><a href="#top">Gêneros</a></li>
+                        <li class="list-comp"><a href="#top">Favoritos</a></li>
+                        <li class="list-comp"><a href="#top">Minha lista</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- Barra de pesquisa PC-->
+                <div class="caixa-de-pesquisa">
+                    <a href="#" class="botao-da-pesquisa">
+                        <img src="imgs/loupe-search-svgrepo-com.svg" alt="lupa" height="18px" width="18px" onclick="">
+                    </a>
+                    <input type="text" class="texto-da-pesquisa" placeholder="Títulos, gêneros e autores">
+                </div>
+
+                <!-- Avatar do usuário -->
+
+                <div class="avatar">
+                    <a href="../Vitor/Biblioteca.html">
+                        <img src="imgs/avatar.png" alt="avatar">
+                    </a>
+                </div>
+
+
+                <!-- Lupa para dispositivos moveis -->
+                <div class="lupatemp">
+                    <img onclick="Pesquisa()" src="imgs/loupe-search-svgrepo-com.svg" alt="lupa" height="25px" width="25px">
+                </div>
+                    
+
+            </header>
+
+            <!-- Menu principal celular -->
+            <nav id="barra-de-tarefas">
+                <ul class="menu-cel" id="menu-cel">
+                    <li class="list-cel" id="list-cel"><a href="#top">Inicio</a></li>
+                    <li class="list-cel" id="list-cel"><a href="#top">Gêneros</a></li>
+                    <li class="list-cel" id="list-cel"><a href="#top">Favoritos</a></li>
+                    <li class="list-cel" id="list-cel"><a href="#top">Minha lista</a></li>
+                    <li class="list-cel" id="list-cel"><a href="../Vitor/Biblioteca.html">Perfil</a></li>
+                </ul>
+            </nav>
+
+            <!-- Barra de pesquisa Cel-->
+            <div class="caixa-da-pesquisa-cel" id="caixa-da-pesquisa-cel">
+                <div class="botao-voltar-pesquisa-cel" id="botao-voltar-pesquisa-cel">
+                    <img onclick="VoltarPesquisa()" src="imgs/ic-back_97586.svg" alt="setinha de voltar" width="20px" height="20px">
+                </div>
+                
+                <input type="text" placeholder="Títulos, gêneros e autores" class="texto-da-pesquisa-cel" id="texto-da-pesquisa-cel">
+
+                <div class="botao-da-pesquisa-cel" id="botao-da-pesquisa-cel">
+                    <img onclick="Pesquisa()" src="imgs/loupe-search-svgrepo-com.svg" alt="lupa" height="20px" width="20px">
+                </div>
+            </div>    
+            
+
+    </body>
+</html>
