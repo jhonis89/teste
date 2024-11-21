@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*teste bug*/
+
+/* Estilos Globais */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui;
+    color: #f8f9fa;
+}
+.botao-voltar{
+    margin-left: 20px;
+}
+.botao-coracaovermelho{
+    display: none;
+}
+
+
+
+.corpo{
+    margin: 15%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    
+        position: fixed; /* ou 'absolute' se preferir */
+        align-items: center;
+   
+
+    
+}
+
+.caixa{
+    background-color: rgb(230, 230, 230);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    box-shadow: 3px 1px 1px 1px black;
+    padding: 11px;
+    padding-bottom: 40px;
+    flex-direction: column;
+}
+.link{
+    color: rgb(138, 138, 138);
+   display: flex;
+   background-color: white;
+   width: 250px;
+   max-width: 250px;
+   overflow: hidden;
+   border: 1px solid rgb(124, 121, 121);
+   height: 35px;
+   border-radius: 40px;
+   padding: 0px 10px 0px 10px;
+   align-items: center;
+
+}
+
+/* #para*/
+.paragrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button1{
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.button2{
+    width: 100px;
+    height: 37px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.icones{
+    display: flex;
+    justify-content: center;
+}
+
+.lista {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0;           /* Remove preenchimento */
+    margin: 0;            /* Remove margem */
+}
+
+.lista li {
+    display: inline;      /* Coloca os itens da lista em linha */
+    margin-right: 10px;  /* Espaço entre os itens */
+}
+
+.icones img {
+    width: 70px; /* Ajuste o tamanho da imagem se necessário */
+    height: 70px;
+}
+
+
+.top{
+    width: 100%;
+    height: 8vh;
+    background-color: #002532;
+    box-shadow: 0px 3px 10px #002532;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+.direitaicon{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.direitaicon img{
+    width: 22px;
+    height: 21px;
+    margin: 10px;
+}
+
+/* Container Principal */
+.container1 {
+    background-color: #446978;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+}
+
+/* Container para as Informações do Livro */
+.container2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Informações do Livro */
+.book-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.book-info img {
+    width: 200px; /* Ajustado para uma largura mais adequada */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px 1px #000000;
+}
+
+/* Detalhes do Livro */
+.book-details h1 {
+    font-size: 1.5em;
+}
+
+.book-details p {
+    font-size: 1em;
+}
+
+/* Rating e Botão */
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.rating {
+    background-color: #87aebe;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.corpoav{
+    height: 250px;
+    width: 400px;
+    display: none;
+    background-color: #f8f8f8;
+    margin-top: 15%;
+    position: fixed; /* ou 'absolute' se preferir */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 7px 7px 40px 7px;
+   
+}
+
+
+.estrelas span:hover{
+    color: gold;
+}
+
+.estrelas span{
+    font-size: 60px;
+    color: #708992;
+    cursor: pointer;
+}
+
+.caixaav{
+    display: flex;
+    width: 100%;
+}
+
+.button2av{
+    width: 100px;
+    height: 100px;
+    width: 104px;
+    height: 38px;
+    border-radius: 10px
+}
+
+
+.paginas{
+    border-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    background-color: #002532;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 3px 1px 3px #000000;
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    height: 39px;
+}
+
+/* Descrição */
+.descricao {
+    padding: 30px 61px 60px 61px;
+    margin-top: 20px;
+    width: 100%;
+    background-color: #658c9b;
+    border-radius: 20px;
+    font-size: 26px;
+    color: white;
+}
+
+.descricao h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    
+}
+
+.descricao p {
+    margin-top: 22px;
+    text-align: justify;
+    font-size: 24px;
+    text-indent: 2em;
+}
+.avaliacao{
+    display: flex;
+    justify-content: space-between;
+}
+#icon{
+    cursor: pointer;
+}
+
+.dec h1{
+    margin-top: 19px;
+}
+/* Responsividade */
+
+@media (max-width: 600px) {
+    .book-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .book-info img {
+        width: 150px;
+    }
+    
+    .descricao {
+        padding: 35px 30px 50px 30px;
+        margin-top: 5px;
+        font-size: 22px;
+    }
+    .avaliacao{
+        display: flex;
+    }
+    .avaliacao p{
+        font-size: 15px;
+        
+    }
+    .paginas p{
+        display: flex;
+        margin-right: 20px;
+        font-size: 18px;
+    }
+    .rating{
+        width: 150px;
+        height: 60px;
+        font-size: 17px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .container1 {
+        padding: 36px;
+    }
+    .book-details h1 {
+        font-size: 1.5em;
+        width: 300px;
+    }
+
+    .corpo{
+        margin: 15%;
+        display: none;
+        justify-content: center;
+    
+        
+            position: fixed; /* ou 'absolute' se preferir */
+            align-items: center;   /* Distância da direita */
+    
+        
+    }
+    
+    .caixa{
+        background-color: rgb(230, 230, 230);
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 20px;
+        box-shadow: 3px 1px 1px 1px black;
+        padding: 11px;
+        padding-bottom: 40px;
+        flex-direction: column;
+    }
+    .link{
+        color: rgb(138, 138, 138);
+       display: flex;
+       background-color: white;
+       width: 250px;
+       max-width: 250px;
+       overflow: hidden;
+       border: 1px solid rgb(124, 121, 121);
+       height: 35px;
+       border-radius: 40px;
+       padding: 0px 10px 0px 10px;
+       align-items: center;
+    
+    }
+    
+    /* #para*/
+    .paragrafo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .button1{
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+
+    .button2{
+        width: 100px;
+        height: 37px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .icones{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .lista {
+        list-style-type: none; /* Remove marcadores da lista */
+        padding: 0;           /* Remove preenchimento */
+        margin: 0;            /* Remove margem */
+    }
+    
+    .lista li {
+        display: inline;      /* Coloca os itens da lista em linha */
+        margin-right: 10px;  /* Espaço entre os itens */
+    }
+    
+    .icones img {
+        width: 67px; /* Ajuste o tamanho da imagem se necessário */
+        height: 67px;
+    }
+    .dec p{
+        font-size: 18px;
+    }
+    
+}

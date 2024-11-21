@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça login e descubra um novo mundo</h1>
+            <img src="../static/img/leitor.svg" class="left-login-image" alt="Imagem gif">
+        </div>
+        <div class="right-login">
+            <!-- Formulário de Login -->
+            <div class="card-login">
+                <h1>Login</h1>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Usuário">
+                    <br>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha">
+                </div>
+                <p>Não tem um cadastro? <span id="cadastro-tab" style="color: rgb(121, 197, 197); cursor: pointer;">Cadastrar</span></p>
+                <button class="bnt-login">Login</button>
+            </div>
+
+            <!-- Formulário de Cadastro -->
+            <div class="card-login-cadastro">
+                <h1>Cadastro</h1>
+                <div class="textfield">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Email">
+                    <br>
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="usuario" placeholder="Usuário">
+                    <br>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" placeholder="Senha">
+                </div>
+                <p>Já tem um cadastro? <span id="login-tab" style="color: rgb(121, 197, 197); cursor: pointer;">Login</span></p>
+                <button class="bnt-login">Cadastrar</button>
+            </div>
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../static/genero.css">
+        <script src="https://kit.fontawesome.com/14cc3106f5.js" crossorigin="anonymous"></script>
+        <title>Webook</title>
+    </head>
+    <body>  
+        <header class="header">
+            <button class="btn" id="btn" onclick="barraCel()">&#9776;</button>
+            <div class="logo" id="logo">
+                <img src="../static/imagens/logo.png" alt="logotipo">
+                <h1>Webook</h1>
+            </div>
+            <nav>
+                <ul class="listaPC">
+                    <li><a href="pagina-inicial.html">Inicio</a></li>
+                    <li><a href="{{ url_for('categorias')}}">Gêneros</a></li>
+                    <li><a href="favoritos.html">Minhas lista</a></li>
+                </ul>
+            </nav>
+
+            <div class="pesquisa" id="pesquisa">
+                <img src="../static/imagens/ic-back_97586.svg" alt="icone-voltar" id="btn_voltar" onclick="Voltar_pesquisa()">
+                <input type="text" placeholder="Títulos, gêneros e autores" id="input_pesquisa">
+                <img src="../static/imagens/loupe-search-svgrepo-com.svg" alt="lupa de pesquisa" id="imgOn" onclick="Abrir_pesquisa()">
+            </div>
+
+            <div class="avatar">
+                <a href="../Vitor/Biblioteca.html"><img src="../static/imagens/avatar.png" alt="avatar" width="20px"></a>
+            </div>
+
+        </header>
+
+        <nav>
+            <ul class="listaCel" id="listaCel">
+                <li><a href="#"><span class="fas fa-book-open" style="color: #f8f9fa;"></span>Meus Livros</a></li>
+                <li><a href="#"><span class="fas fa-star" style="color: #f8f9fa;"></span>Favoritos</a></li>
+                <li><a href="#"><span class="fas fa-cog" style="color: #f8f9fa;"></span>Configurações</a></li>
+                <li><a href="#"><span class="fas fa-phone" style="color: #f8f9fa;"></span>Contato</a></li>
+                <li><a href="#"><span class="fas fa-user" style="color: #f8f9fa;"></span>Perfil</a></li>
+            </ul>
+        </nav>
+
+
+        <h2 class="titulo">Livros de {{genero}}</h2>
+
+        {% for livro in livros %}
+                <div class="seccao">
+                    <a href="{{ url_for('livro_descricao', livro_id=livro.id_livro) }}">
+                        <div class="img">
+                            <img src="{{livro.capa_livro}}" alt="Capa do livro {{livro.nome_livro}}">
+                        </div>
+                        <div class="livro-info">
+                            <h2 class="nome"> {{livro.nome_livro}} </h2>
+                            <p class="autor">{{livro.autor_livro}}</p>
+                            <p class="desc">{{livro.desc_livro}}</p>
+                        </div>
+                    </a>
+                </div>
+            </a>
+        {% endfor %}
+        

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoritos</title>
+    <link rel="stylesheet" href="../static/favoritos.css">
+</head>
+<body>
+    <header class="header">
+        <button class="btn" id="btn" onclick="barraCel()">&#9776;</button>
+        <div class="logo" id="logo">
+            <img src="imgs/logo.png" alt="logotipo">
+            <h1>Webook</h1>
+        </div>
+        <nav>
+            <ul class="listaPC">
+                <li><a href="pagina-inicial.html">Inicio</a></li>
+                <li><a href="{{ url_for('categorias')}}">Gêneros</a></li>
+                <li><a href="favoritos.html">Minhas lista</a></li>
+            </ul>
+        </nav>
+
+        <div class="pesquisa" id="pesquisa">
+            <img src="imgs/ic-back_97586.svg" alt="icone-voltar" id="btn_voltar" onclick="Voltar_pesquisa()">
+            <input type="text" placeholder="Títulos, gêneros e autores" id="input_pesquisa">
+            <img src="imgs/loupe-search-svgrepo-com.svg" alt="lupa de pesquisa" id="imgOn" onclick="Abrir_pesquisa()">
+        </div>
+
+        <div class="avatar">
+            <a href="../Vitor/Biblioteca.html"><img src="imgs/avatar.png" alt="avatar" width="20px"></a>
+        </div>
+
+    </header>
+
+    <nav>
+        <ul class="listaCel" id="listaCel">
+            <li><a href="#"><span class="fas fa-book-open" style="color: #f8f9fa;"></span>Meus Livros</a></li>
+            <li><a href="#"><span class="fas fa-star" style="color: #f8f9fa;"></span>Favoritos</a></li>
+            <li><a href="#"><span class="fas fa-cog" style="color: #f8f9fa;"></span>Configurações</a></li>
+            <li><a href="#"><span class="fas fa-phone" style="color: #f8f9fa;"></span>Contato</a></li>
+            <li><a href="#"><span class="fas fa-user" style="color: #f8f9fa;"></span>Perfil</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="fundo">
+        <script>
+            // Obter o número de livros da URL
+            const params = new URLSearchParams(window.location.search);
+            const numeroDeLivros = parseInt(params.get('numero'));
+
+            // Verificar se o número de livros é válido
+            if (!isNaN(numeroDeLivros) && numeroDeLivros > 0) {
+                // Criar os livros dinamicamente
+                const fundo = document.querySelector('.fundo');
+                for (let i = 0; i < numeroDeLivros; i++) {
+                    const livro = document.createElement('div');
+                    livro.classList.add('livro');
+
+                    // Adicionar conteúdo ao livro
+                    livro.innerHTML = `
+                       
+                            <div class="capa">
+                                <img src="https://s3.observador.pt/wp-content/uploads/2020/05/27105914/61040002_hp_camara_segredos-rl.jpg" alt="Capa do livro">
+                            </div>
+                            <div class="divisao">
+                                <div class="titulo"><h1>Harry Potter e a Câmara Secreta</h1></div>
+                                <div class="autor"><p>J.K. Rowling</p></div>
+                            </div>
+                        
+                    `;
+
+                    // Adicionar o livro à div 'fundo'
+                    fundo.appendChild(livro);
+                }
+            } else {
+                alert('Número de livros inválido!');
+            }
+        </script>
+    </div>
+
+</body>
+</html>

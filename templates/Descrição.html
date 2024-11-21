@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter - Aluguel de Livro</title>
+    <link rel="stylesheet" href="../static/Descrição.css">
+</head>
+<body>
+  <!--Teste do termux aqui-->
+    <script src="../static/Descrição.js"></script>
+    <header class="top" id="top">
+        <a href="../jhonatan/Pagina-inicial.html">
+            <div class="botao-voltar" id="icon">
+                <img onclick="VoltarPesquisa()" src="../static/imagens/ic-back_97586.svg" alt="setinha de voltar">
+            </div>
+        </a>
+        
+            <div class="direitaicon">
+                <div class="botao-coracao" id="icon">
+                    <img onclick="Coracao()" src="../static/img/coraçao.png" alt="coracao">
+                </div>
+                <div class="botao-coracaovermelho" id="icon">
+                    <img onclick="Coracao()" src="../static/img/coraçaovermelho.png" alt="coracao">
+                </div>
+        
+            <div class="botao-compartilhar" id="icon">
+                <img onclick="Compartilhar()" src="../static/img/compartilhar(final).png" alt="compartilhar">
+        </div>  
+    </div>
+    </header> 
+    <div class="container1">
+        <div class="container2">
+            <div class="book-info">
+                <img src="{{livro.capa_livro}}" alt="Capa do Livro">
+                <div class="book-details">
+                    <h1>{{livro.nome_livro}}</h1>
+                    <p>{{livro.autor_livro}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="corpo">
+            <div class="caixa">
+                <div onclick="Compartilhar()" class="voltar">
+                  <img src="../static/imagens/ic-back_97586.svg" alt="setinha de voltar">  
+                </div>
+                    
+              <div class="paragrafo">
+                <p class="link">file:///C:/GitRian/Biblioteca/Biblioteca/Rian/Descri%C3%A7%C3%A3o.html</p>
+                <div class="button1">
+                <button class="button2" >Copiar</button>
+                </div>
+            </div>
+            <div class="icones">
+                <ul class="lista">
+                    <li><img id="icon" src="../static/img/wpp.png" alt="wpp"></li>
+                    <li><img id="icon" src="../static/img/Faceboosk.png" alt="face"></li>
+                    <li><img id="icon" src="../static/img/blue.png" alt="blue"></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+
+        <div class="corpoav">
+            <div class="caixaav">
+                <div onclick="Avaliar()" class="voltarav">
+                  <img src="../static/imagens/ic-back_97586.svg" alt="setinha de voltar">  
+                </div>
+                
+            </div>
+            <div class="estrelas">
+                    <div class="estrela" id="stars">
+                        <span data-value="1">&#9733;</span>
+                        <span data-value="2">&#9733;</span>
+                        <span data-value="3">&#9733;</span>
+                        <span data-value="4">&#9733;</span>
+                        <span data-value="5">&#9733;</span>
+                    </div>
+            </div>
+            <div class="button1av">
+            <button class="button2av" id="avaliar">Avaliar</button>
+            </div>
+            </div>
+
+
+        <div class="container3">
+            
+            <a href="../Marcos/Cadastro.html" class="button">ALUGAR</a>
+            <div class="description">
+                
+            </div>
+        </div>
+        <div class="descricao">
+            <div class="avaliacao">
+                <div class="rating" onclick="Avaliar()">
+                Avaliações <span>⭐4.9</span>
+            </div>
+            <div class="paginas">
+                <p>Páginas: 208</p>
+            </div>
+            </div>
+            <strong class="dec">
+                <h1>Descrição:</h1>
+                <p>{{livro.desc_livro}}</p>
+            </strong>
+            
+        </div>
+    </div>
+</body>
+</html>

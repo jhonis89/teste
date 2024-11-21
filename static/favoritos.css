@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*teste bug*/
+
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", system-ui;
+    color: #f8f9fa;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #00141e;
+}
+
+.header{
+    width: 100vw;
+    height: 7vh;
+    background-color: #002532;
+    max-width: 100%;
+    box-shadow: 1px 3px 20px #002532;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo{
+    display: inline-block;
+    text-align: center;
+}
+
+.logo img{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+}
+
+.logo h1{
+    font-size: 15px;
+    cursor: default;
+}
+
+a{
+    color: #f8f9fa;
+    text-decoration: none;
+}
+
+
+
+.listaPC{
+    display: inline-block;
+    padding: 0;
+
+}
+.listaPC li {
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.listaPC li::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #658C9B;
+    transition: width 0.4s ease;
+}
+
+.listaPC li:hover::before {
+    width: 100%;
+}
+
+.listaPC li:not(:last-child){
+    margin-right: 15px;
+}
+
+.pesquisa{
+    display: flex;
+    border: 1px solid #658C9B;
+    padding: 3px;
+    align-items: center;
+}
+
+.pesquisa input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #f8f9fa;
+}
+
+.pesquisa img{
+    width: 20px;
+}
+
+.pesquisa a{
+    height: 20px;
+}
+
+.avatar img{
+    width: 35px;
+    height: 35px;
+}
+
+.btn{
+    display: none;
+}
+
+.pesquisa img:first-child{
+    display: none; /* IB */
+} 
+
+
+/* ---------------------------------------fim classe pesquisa-------------------------------------------- */
+
+
+.listaCel{
+    display: none;
+}
+
+.container-slider{
+    display: flex;
+    justify-content: space-evenly ;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.slider{
+    max-width: 90vw;
+    position: relative;
+}
+
+.slider .carousel{
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.5s ease;
+}
+.carousel.dragging {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.container-slider i{
+    opacity: 10%;
+    color: #658C9B;
+    background-color: #f8f9fa;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.container-slider i:hover{
+    transition: 1s;
+    opacity: 50%;
+}
+
+.carousel img{
+    width: calc(100% / 3);
+    object-fit: cover;
+    height: calc(320px - (320px * 10 / 100));
+    margin-left: 15px;
+    border-radius: 20px;
+}
+
+.carousel img:first-child{
+    margin-left: 0;
+}
+
+/* ---------------------------------------fim classe carrossel-------------------------------------------- */
+
+
+.fundo {
+    background: url(../Jhonatan/imgs/background.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    width: 100%; /* Faz com que o fundo ocupe toda a largura da tela, mas os livros terão largura controlada */
+    display: flex;
+    flex-direction: column; /* Organiza os livros verticalmente (um embaixo do outro) */
+    gap: 3px; /* Espaçamento entre os livros */
+    justify-content: center; /* Centraliza os livros na tela */
+    margin: 50px 0; /* Margem superior e inferior */
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+/* ---------------------------------------fim corpo-------------------------------------------- */
+
+.livro {
+    width: 100%; /* Largura fixa para cada livro */
+    padding: 10px 5px 10px 14px;
+    background-color: #002532;
+    border-radius: 13px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row; /* Organiza a capa, título e autor na horizontal */
+    align-items: center; /* Alinha a capa e os textos verticalmente no centro */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destacar os livros */
+    margin-bottom: 20px; /* Espaçamento entre livros */
+}
+
+.livro .capa {
+    width: 80px; /* Largura fixa para a capa */
+    height: auto;
+    margin-right: 0px; /* Espaçamento entre a capa e o título */
+}
+
+.livro .capa img {
+    width: 145px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 9px;
+    padding: 2px;
+}
+
+
+.livro .titulo h1 {
+    font-size: 34px; /* Tamanho do título */
+
+}
+.livro .divisao {
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column; /* Título e autor organizados em coluna */
+    justify-content: center;
+}
+/* ---------------------------------------fim classe livros-------------------------------------------- */

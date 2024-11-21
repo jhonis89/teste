@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Knewave&family=Outfit:wght@100..900&display=swap');
+
+body {
+    margin: 0;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background-color: #002532;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-login > h1 {
+    color: #87aebe;
+    font-size: 3.5vh;
+    text-shadow: 0px 0px 35px #87aebe;
+    font-family: "Outfit", sans-serif;
+}
+
+.right-login {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-login {
+    width: 27vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #224755;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-login-cadastro {
+    width: 27vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background-color: #224755;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-login > h1 {
+    font-family: "Outfit", sans-serif;
+    color: #d2ebf5;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 0px 0px 35px #87aebe;
+}
+.card-login-cadastro > h1 {
+    font-family: "Outfit", sans-serif;
+    color: #d2ebf5;
+    font-weight: 800;
+    margin: 0;
+    text-shadow: 0px 0px 35px #87aebe;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #446978;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.card-login > p {
+    font-family: "Outfit", sans-serif;
+    color: #dff3f3de;
+    margin-bottom: 10px;
+}
+.card-login-cadastro > p {
+    font-family: "Outfit", sans-serif;
+    color: #dff3f3de;
+    margin-bottom: 10px;
+}
+
+.textfield > label {
+    font-family: "Outfit", sans-serif;
+    color: #f0ffffde;
+    margin: 0px;
+}
+
+.textfield > input::placeholder {
+    color: #f0ffff94
+}
+
+.bnt-login {
+    width: 40%;
+    height: 42px;
+    margin: 17px;
+    border: none;
+    border-radius: 9px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #87aebe;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #f0ffffde;
+}
+
+.left-login-image {
+    width: 35vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-login {
+        flex-direction: column;
+    }
+
+    .left-login > h1 {
+        display: none;
+    }
+
+    .left-login {
+        width: 100vw;
+        height: 25%;
+    }
+
+    .right-login {
+        width: 100vw;
+        height: auto;
+    }
+
+    .left-login-image {
+        width: 65vw;
+    }
+
+    .card-login {
+        width: 58vw;
+    }
+    
+    .card-login-cadastro {
+        width: 66vw;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px 35px;
+        background-color: #224755;
+        border-radius: 20px;
+        box-shadow: 0px 10px 40px #00000056;
+        overflow: hidden;
+        position: relative;
+    }
+    .bnt-login {
+        width: 56%;
+    }
+}
